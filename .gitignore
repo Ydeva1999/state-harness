@@ -1,0 +1,50 @@
+# Secrets & Environment Variables
+.env
+.env.*
+*.key
+*.pem
+*.cert
+*.p12
+*.pfx
+
+# Python Artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Dynamic Harness Runtime State (Users maintain locally)
+.harness/memory/state.json
+.agy/memory/state.json
+*.log
+reports/local_*
+
+# OS Artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE Artifacts
+.vscode/
+.idea/
+*.sublime-workspace
+*.swp

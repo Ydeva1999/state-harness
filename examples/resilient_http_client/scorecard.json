@@ -1,0 +1,31 @@
+{
+  "submission": "client.py",
+  "total_score": 20,
+  "verdict": "ACCEPT",
+  "dimensions": {
+    "backoff_jitter": {
+      "score": 5,
+      "line": 29,
+      "quote": "wait_time = (2 ** attempt) + random.uniform(0.1, 0.5)",
+      "rationale": "Full exponential backoff with randomized jitter on 429/5xx status codes."
+    },
+    "concurrency": {
+      "score": 5,
+      "line": 12,
+      "quote": "self.semaphore = asyncio.Semaphore(max_concurrent)",
+      "rationale": "Guarded by asyncio.Semaphore for bounded concurrency."
+    },
+    "cleanup": {
+      "score": 5,
+      "line": 19,
+      "quote": "async def __aexit__(self, exc_type, exc_val, exc_tb):",
+      "rationale": "Implements async context manager protocol closing session gracefully."
+    },
+    "observability": {
+      "score": 5,
+      "line": 30,
+      "quote": "logger.warning(\"retryable_error\", extra={\"status\": response.status_code...})",
+      "rationale": "Structured logging with status, attempt, and wait telemetry."
+    }
+  }
+}

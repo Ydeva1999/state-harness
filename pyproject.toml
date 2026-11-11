@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "state-harness"
+version = "1.0.0"
+authors = [
+  { name = "StateHarness Core Team", email = "maintainers@users.noreply.github.com" },
+]
+description = "StateHarness: Zero-dependency state ledgering, cryptographic zero-token caching, and independent judicial verification for AI agents."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["ai", "agents", "harness-engineering", "reliability", "verification", "stateful-ai", "evals"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/stateharness/state-harness"
+"Bug Tracker" = "https://github.com/stateharness/state-harness/issues"
+
+[project.scripts]
+state-harness-scaffold = "harness.scaffold:main"
+state-harness-delta = "harness.delta_runner:main"
+state-harness-verify = "harness.verifier:main"
+state-harness-snapshot = "harness.snapshot:main"
